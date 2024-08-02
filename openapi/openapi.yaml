@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: Example API
+  title: API First Simple Store App with Spring Boot
   termsOfService: https://example.com/terms/
   contact:
     name: Contact our support
@@ -14,20 +14,12 @@ info:
     url: 'https://redocly.github.io/openapi-template/logo.png'
     altText: OpenAPI example logo
   description: >
-    This is an **example** API to demonstrate features of the OpenAPI
-    specification.
+    This is an **example** API to 
 
     # Introduction
 
-    This API definition is intended to to be a good starting point for
-    describing your API in [OpenAPI/Swagger
-    format](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md).
-
-    It also demonstrates features of the
-    [create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-    and the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-    the standard OpenAPI syntax, we use a few 
-    [vendor extensions](https://github.com/Redocly/Redoc/blob/main/docs/redoc-vendor-extensions.md).
+    This API definition is intended to demonstrate features of the OpenAPI
+    specification.
 
     # OpenAPI Specification
 
@@ -44,25 +36,11 @@ externalDocs:
   description: "Find out how to create a GitHub repo for your OpenAPI definition."
   url: 'https://github.com/Redocly/create-openapi-repo'
 tags:
-  - name: Echo
-    description: "Example echo operations."
   - name: User
     description: "Example actions on user accounts."
-  - name: Admin
-    description: "Example operations reserved for administrators."
   - name: Info
     description: "Example operations for retrieving information."
-  - name: Tag
-    description: "This is a tag description."
-x-tagGroups:
-  - name: General
-    tags:
-      - User
-      - Info
-      - Echo
-  - name: Administration
-    tags:
-      - Admin
+
 servers:
   - url: https://{tenant}/api/v1
     variables:
@@ -77,12 +55,7 @@ paths:
     $ref: 'paths/user.yaml'
   '/user/list':
     $ref: 'paths/user-status.yaml'
-  /pathItem:
-    $ref: paths/pathItem.yaml
-  /pathItemWithExamples:
-    $ref: paths/pathItemWithExamples.yaml
-  '/echo':
-    $ref: 'paths/echo.yaml'
+
 components:
   securitySchemes:
     main_auth:
