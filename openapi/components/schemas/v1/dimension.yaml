@@ -1,0 +1,13 @@
+type: object
+properties:
+  length:
+    type: integer
+    format: int64
+  width:
+    type: integer
+    format: int64
+  height:
+    type: integer
+    format: int64
+  unit:
+    type: string

@@ -3,10 +3,12 @@ properties:
   id:
     type: string
     format: uuid
-  category:
+    description: unique image id
+  altText:
     type: string
-  description:
+  url:
     type: string
+    format: url
   dateCreated:
     type: string
     format: date-time
