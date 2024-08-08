@@ -1,0 +1,12 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: unique product id
+  description:
+    type: string
+  price:
+    type: number
+
+

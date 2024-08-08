@@ -1,0 +1,17 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: unique image id
+  altText:
+    type: string
+  url:
+    type: string
+    format: url
+  dateCreated:
+    type: string
+    format: date-time
+  dateModified:
+    type: string
+    format: date-time

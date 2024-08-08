@@ -36,8 +36,12 @@ externalDocs:
   description: "Find out how to create a GitHub repo for your OpenAPI definition."
   url: 'https://github.com/Redocly/create-openapi-repo'
 tags:
-  - name: User
-    description: "Example actions on user accounts."
+  - name: Customer
+    description: "Customer operations"
+  - name: Product
+    description: "Product operations"
+  - name: Order
+    description: "Order operations"
   - name: Info
     description: "Example operations for retrieving information."
 
@@ -49,13 +53,21 @@ servers:
         description: Your tenant id
   - url: https://example.com/api/v1
 paths:
-  '/users/{username}':
-    $ref: 'paths/users_{username}.yaml'
-  '/user':
-    $ref: 'paths/user.yaml'
-  '/user/list':
-    $ref: 'paths/user-status.yaml'
+  '/v1/customers':
+    $ref: 'paths/v1/customers.yaml'
+  '/v1/customers/{customerId}':
+    $ref: 'paths/v1/customers_{customerId}.yaml'
+  '/v1/products':
+    $ref: 'paths/v1/products.yaml'
+  '/v1/products/{productId}':
+    $ref: 'paths/v1/products_{productId}.yaml'
+  '/v1/orders':
+    $ref: 'paths/v1/orders.yaml'
+  '/v1/orders/{orderId}':
+    $ref: 'paths/v1/orders_{orderId}.yaml'
 
+security:
+  - basic_auth: []
 components:
   securitySchemes:
     main_auth:
@@ -75,21 +87,4 @@ components:
     basic_auth:
       type: http
       scheme: basic
-webhooks:
-  userInfo:
-    post:
-      summary: New user webhook
-      description: "Information about a new user in the system."
-      operationId: userInfo
-      tags:
-        - Info
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: 'components/schemas/User.yaml'
-      responses:
-        '200':
-          description: "Successfully retrieved information about a new user."
-      security:
-        - api_key: []
+
