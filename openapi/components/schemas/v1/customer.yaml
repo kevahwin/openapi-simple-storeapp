@@ -17,4 +17,4 @@ properties:
   paymentMethods:
     type: array
     items:
-      $ref: payment_methods.yaml
+      $ref: payment_method.yaml
