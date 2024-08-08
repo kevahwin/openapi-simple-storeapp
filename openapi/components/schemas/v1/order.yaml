@@ -1,0 +1,20 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: unique order id
+  customer:
+    $ref: order_customer.yaml
+  orderLines:
+    type: array
+    items:
+      $ref: order_line.yaml
+  orderStatus:
+    type: string
+  dateCreated:
+    type: string
+    format: date-time
+  dateModified:
+    type: string
+    format: date-time
