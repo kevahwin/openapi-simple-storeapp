@@ -14,10 +14,12 @@ properties:
     type: string
     maxLength: 255
     minLength: 3
+    example: kevahwin@apple.com
   phone:
     type: string
     maxLength: 15
     minLength: 7
+    example: 979-000-2314
   paymentMethods:
     type: array
     items:
