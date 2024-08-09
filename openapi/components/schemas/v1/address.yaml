@@ -9,6 +9,7 @@ properties:
     description: Address Line 1
     minLength: 3
     maxLength: 100
+    example: 26 Adeleke Street
   addressLine2:
     type: string
     description: Address Line 2
@@ -19,16 +20,19 @@ properties:
     description: City
     minLength: 2
     maxLength: 100
+    example: Ijegun
   state:
     type: string
     description: State
     minLength: 2
     maxLength: 100
+    example: Lagos
   zip:
     type: string
     description: Zip Code
     minLength: 5
     maxLength: 10
+    example: 999999
 required:
   - addressLine1
   - city
