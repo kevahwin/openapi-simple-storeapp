@@ -1,7 +1,7 @@
 # Simple Store API
 
 ## Overview
-![img.png]((https://github.com/user-attachments/assets/d79acf66-f91b-4016-8005-80c6f31e0ec0))
+<img width="1273" alt="img" src="https://github.com/user-attachments/assets/d79acf66-f91b-4016-8005-80c6f31e0ec0">
 
 
 ### Technologies
