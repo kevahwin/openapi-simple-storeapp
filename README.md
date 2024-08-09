@@ -1,7 +1,8 @@
 # Simple Store API
 
 ## Overview
-![img.png](img.png)
+![img.png]([img.png](https://github.com/user-attachments/assets/d79acf66-f91b-4016-8005-80c6f31e0ec0))
+
 
 ### Technologies
 - OpenAPI 3.0
