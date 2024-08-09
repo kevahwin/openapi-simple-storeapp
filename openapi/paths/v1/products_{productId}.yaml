@@ -3,7 +3,7 @@ get:
     - Product
   summary: Get product by ID
   description: Get product by ID
-  operationId: getProductById
+  operationId: getProductBId
   parameters:
     - name: productId
       in: path
