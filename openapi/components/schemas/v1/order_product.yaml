@@ -4,9 +4,15 @@ properties:
     type: string
     format: uuid
     description: unique product id
+    readOnly: true
   description:
     type: string
+    example: Toothbrush
   price:
     type: number
+    example: 1.70
+required:
+  - description
+  - price
 
 

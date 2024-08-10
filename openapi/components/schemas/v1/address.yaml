@@ -4,8 +4,11 @@ properties:
     type: string
     format: uuid
     description: Unique identifier representing a specific customer address
+    readOnly: true
   addressLine1:
-    type: string
+    type:
+      - string
+      - 'null'
     description: Address Line 1
     minLength: 3
     maxLength: 100
