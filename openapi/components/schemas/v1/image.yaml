@@ -4,14 +4,26 @@ properties:
     type: string
     format: uuid
     description: unique image id
+    readOnly: true
   altText:
-    type: string
+    type:
+      - string
+      - 'null'
+    minLength: 3
+    maxLength: 255
   url:
     type: string
     format: url
+    description: The url of the image
+    minLength: 5
+    maxLength: 500
   dateCreated:
     type: string
     format: date-time
+    readOnly: true
   dateModified:
     type: string
     format: date-time
+    readOnly: true
+required:
+  - url

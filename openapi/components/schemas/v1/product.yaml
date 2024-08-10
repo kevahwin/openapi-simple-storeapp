@@ -4,8 +4,10 @@ properties:
     type: string
     format: uuid
     description: unique product id
+    readOnly: true
   description:
     type: string
+    example: Colgate Toothpaste
   images:
     type: array
     items:
@@ -20,12 +22,23 @@ properties:
       $ref: category.yaml
   price:
     type: number
+    example: 1.28
   cost:
     type: number
+    example: 0.10
   dateCreated:
     type: string
     format: date-time
+    readOnly: true
   dateModified:
     type: string
     format: date-time
+    readOnly: true
+required:
+  - description
+  - images
+  - dimensions
+  - categories
+  - price
+  - cost
 

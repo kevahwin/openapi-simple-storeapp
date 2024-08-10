@@ -3,13 +3,25 @@ properties:
   id:
     type: string
     format: uuid
+    readOnly: true
   category:
     type: string
+    minLength: 3
+    maxLength: 25
+    example: Home & Body
   description:
     type: string
+    minLength: 3
+    maxLength: 255
+    example: Home care and body products
   dateCreated:
     type: string
     format: date-time
+    readOnly: true
   dateModified:
     type: string
     format: date-time
+    readOnly: true
+required:
+  - category
+  - description

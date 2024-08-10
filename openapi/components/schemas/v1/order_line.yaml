@@ -4,17 +4,25 @@ properties:
     type: string
     format: uuid
     description: unique product id
+    readOnly: true
   product:
     $ref: order_product.yaml
   order_quantity:
     type: integer
     description: the quantity of items ordered
+    example: 20
   ship_quantity:
     type: integer
     description: the quantity of items shipped
+    example: 15
   dateCreated:
     type: string
     format: date-time
+    readOnly: true
   dateModified:
     type: string
     format: date-time
+    readOnly: true
+required:
+  - product
+  - order_quantity

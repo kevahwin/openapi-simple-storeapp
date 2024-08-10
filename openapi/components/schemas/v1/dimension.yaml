@@ -3,11 +3,22 @@ properties:
   length:
     type: integer
     format: int64
+    example: 24.23
   width:
     type: integer
     format: int64
+    example: 12.24
   height:
     type: integer
     format: int64
+    example: 15
   unit:
     type: string
+    minLength: 1
+    maxLength: 5
+    example: mm
+required:
+  - length
+  - width
+  - height
+  - unit
