@@ -15,13 +15,9 @@ properties:
     maxLength: 255
     example: Home care and body products
   dateCreated:
-    type: string
-    format: date-time
-    readOnly: true
+    $ref: ../common/iso_timestamp.yaml
   dateModified:
-    type: string
-    format: date-time
-    readOnly: true
+    $ref: ../common/iso_timestamp.yaml
 required:
   - category
   - description

@@ -24,13 +24,9 @@ properties:
     minLength: 1
     maxLength: 255
   dateCreated:
-    type: string
-    format: date-time
-    readOnly: true
+    $ref: ../common/iso_timestamp.yaml
   dateModified:
-    type: string
-    format: date-time
-    readOnly: true
+    $ref: ../common/iso_timestamp.yaml
 required:
   - customer
   - orderLines
