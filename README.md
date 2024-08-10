@@ -7,7 +7,7 @@
 ### Technologies
 - OpenAPI 3.0
 - Redocly
-- Java 21
+- Java 17
 - Spring Boot 3.3.2
 - Maven
 
