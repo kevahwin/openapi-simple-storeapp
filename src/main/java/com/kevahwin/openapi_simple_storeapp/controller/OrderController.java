@@ -1,0 +1,35 @@
+package com.kevahwin.openapi_simple_storeapp.controller;
+
+import static com.kevahwin.openapi_simple_storeapp.controller.CustomerController.BASE_URL;
+
+import com.kevahwin.openapi_simple_storeapp.model.Order;
+import com.kevahwin.openapi_simple_storeapp.service.OrderService;
+import java.util.List;
+import java.util.UUID;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping(BASE_URL)
+public class OrderController {
+  private static final String BASE_URL = "/v1";
+
+  private final OrderService orderService;
+
+  @GetMapping("/orders")
+  public ResponseEntity<List<Order>> getAllOrders(){
+    return ResponseEntity.ok(orderService.listOrders());
+  }
+
+  @GetMapping("/orders/{orderId}")
+  public ResponseEntity<Order> getOrderById(@PathVariable("orderId") UUID uuid) {
+    return ResponseEntity.ok(orderService.getOrderById(uuid));
+  }
+
+
+}
