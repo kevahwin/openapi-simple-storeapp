@@ -18,15 +18,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(BASE_URL)
 public class CustomerController {
 
-  public static final String BASE_URL = "/v1/customers";
+  public static final String BASE_URL = "/v1";
   private final CustomerService customerService;
 
-  @GetMapping
+  @GetMapping("/customers")
   public ResponseEntity<List<Customer>> getAllCustomers(){
     return ResponseEntity.ok(customerService.listCustomers());
   }
 
-  @GetMapping("/{customerId}")
+  @GetMapping("/customers/{customerId}")
   public ResponseEntity<Customer> getCustomerById(@PathVariable("customerId") UUID customerId){
     return ResponseEntity.ok(customerService.getCustomerById(customerId));
   }

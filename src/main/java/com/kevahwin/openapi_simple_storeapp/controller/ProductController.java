@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(BASE_URL)
 @RequiredArgsConstructor
+@RequestMapping(BASE_URL)
 public class ProductController {
 
-  private static final String BASE_URL = "/v1";
+  public static final String BASE_URL = "/v1";
   private final ProductService productService;
 
   @GetMapping("/products")

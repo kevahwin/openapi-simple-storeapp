@@ -55,7 +55,7 @@ public class DataLoader implements CommandLineRunner {
                 List.of(
                     PaymentMethod.builder()
                         .displayName("Kay Evans")
-                        .cardNumber(1234578934)
+                        .cardNumber(BigDecimal.valueOf(1234578934))
                         .expiryMonth(8)
                         .expiryYear(2026)
                         .cvv(231)
@@ -100,7 +100,7 @@ public class DataLoader implements CommandLineRunner {
                 List.of(
                     PaymentMethod.builder()
                         .displayName("Percy Collins")
-                        .cardNumber(1234578652)
+                        .cardNumber(BigDecimal.valueOf(1234578652))
                         .expiryMonth(3)
                         .expiryYear(2025)
                         .cvv(149)
