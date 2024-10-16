@@ -26,7 +26,7 @@ public class CustomerController {
     return ResponseEntity.ok(customerService.listCustomers());
   }
 
-  @GetMapping("/{customerId}")
+  @GetMapping("/customers/{customerId}")
   public ResponseEntity<Customer> getCustomerById(@PathVariable("customerId") UUID customerId){
     return ResponseEntity.ok(customerService.getCustomerById(customerId));
   }
