@@ -6,13 +6,12 @@ properties:
     description: Unique identifier representing a specific customer address
     readOnly: true
   addressLine1:
-    type:
-      - string
-      - 'null'
+    type: string
     description: Address Line 1
     minLength: 3
     maxLength: 100
     example: 26 Adeleke Street
+    nullable: true
   addressLine2:
     type: string
     description: Address Line 2

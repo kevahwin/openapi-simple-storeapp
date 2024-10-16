@@ -6,11 +6,10 @@ properties:
     description: unique image id
     readOnly: true
   altText:
-    type:
-      - string
-      - 'null'
+    type: string
     minLength: 3
     maxLength: 255
+    nullable: true
   url:
     type: string
     format: url

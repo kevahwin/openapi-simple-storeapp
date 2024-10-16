@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping(BASE_URL)
 public class OrderController {
-  private static final String BASE_URL = "/v1";
+  public static final String BASE_URL = "/v1";
 
   private final OrderService orderService;
 
